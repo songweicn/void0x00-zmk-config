@@ -23,7 +23,7 @@
 COMBO(at,     &kp AT,      LT3 LT2,     DEF,          80,  50)
 COMBO(hash,   &kp HASH,    LT2 LT1,     DEF,          80,  50)
 COMBO(esc,    &kp ESC,     LT4 LT3,     DEF,          80,  50)
-COMBO(del,    &kp DEL,     RT3 RT4,     DEF,          80,  50)
+// COMBO(del,    &kp DEL,     RT3 RT4,     DEF,          80,  50)
 // COMBO(bspc,   &kp BSPC,    RT1 RT2,     DEF,          80,  50)
 
 // middle
