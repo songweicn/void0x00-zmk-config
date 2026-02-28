@@ -29,7 +29,7 @@ layers:
   - B
   - N
   - {t: M, h: Ctrl}
-  - {t: ',', h: Sft+Spc}
+  - ','
   - {t: ., h: Alt}
   - /
   - Enter
@@ -204,9 +204,6 @@ combos:
   l: [DEF]
 - p: [0, 1]
   k: Esc
-  l: [DEF]
-- p: [8, 9]
-  k: Del
   l: [DEF]
 - p: [12, 13]
   k: (

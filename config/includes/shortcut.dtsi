@@ -22,8 +22,8 @@
 
   #define CH_DEL LC(D)
   #define WD_DEL LA(DEL)
-  #define CH_BSPC BSCP
-  #define WD_BSPC LA(BSCP)
+  #define CH_BSPC BSPC
+  #define WD_BSPC LA(BSPC)
   #define ST_LINE LG(LEFT)
   #define EN_LINE LG(RIGHT)
   #define ST_DOC LG(UP)

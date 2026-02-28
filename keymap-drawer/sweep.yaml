@@ -28,8 +28,8 @@ layers:
   - B
   - N
   - {t: M, h: Ctrl}
-  - {t: ',', h: Sft+Spc}
-  - {t: ., h: Alt}
+  - ','
+  - {t: ., h: Ctl+SPC}
   - /
   - {t: SPC, h: NAV}
   - {t: Tab, h: SYS}
@@ -110,11 +110,11 @@ layers:
   - Gui+Tab
   - Tab Left
   - Tab Right
-  - {t: Gui+W, h: Gui+Q}
+  - {t: Gui+W, h: Alt+Gui+Esc}
   - Ins
-  - {t: Del, h: Alt+Del}
+  - {t: Bspc, h: Alt+Bspc}
   - {t: ↑, h: Gui+↑}
-  - {t: Ctl+D, h: Alt+Ctl+D}
+  - {t: Ctl+D, h: Alt+Del}
   - PgUp
   - Gui
   - Alt
@@ -144,7 +144,7 @@ layers:
   - Boot
   - Reset
   - BAT Save
-  - Lock
+  - Ctl+Gui+Q
   - Sleep
   - ''
   - ''
@@ -184,9 +184,6 @@ combos:
   l: [DEF]
 - p: [0, 1]
   k: Esc
-  l: [DEF]
-- p: [8, 9]
-  k: Del
   l: [DEF]
 - p: [12, 13]
   k: (
