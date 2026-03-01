@@ -36,7 +36,7 @@ include:
 #    artifact-name: totem_central_left
   - board: xiao_ble
     shield: totem_left rgbled_adapter
-    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+#    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     artifact-name: totem_peripheral_left
   - board: xiao_ble
     shield: totem_right rgbled_adapter
