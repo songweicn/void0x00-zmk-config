@@ -50,6 +50,9 @@ manifest:
 #      path: modules/zmk/leader-key
 #    - name: zmk-tri-state
 #      path: modules/zmk/tri-state
+    - name: zmk-smart-toggle
+      remote: caksoylar
+      revision: main
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
