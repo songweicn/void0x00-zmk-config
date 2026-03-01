@@ -7,13 +7,13 @@
 #include <input/processors.dtsi>
 
 &mmv {
-    acceleration-exponent = <1>;      // 1
-    time-to-max-speed-ms = <300>;     // 300
-    trigger-period-ms = <8>;          // 16
+    acceleration-exponent = <1>;      // 1 가속 0 가속없음
+    time-to-max-speed-ms = <500>;     // 300 움직이는 최대속도
+    trigger-period-ms = <8>;          // 16 줄이면 랙이 줄어드는 느낌, 카운팅 속도
 };
 
 &msc {
     acceleration-exponent = <0>;      // 0
-    time-to-max-speed-ms = <100>;     // 300
+    time-to-max-speed-ms = <300>;     // 300
     trigger-period-ms = <8>;          // 8
 };
