@@ -26,9 +26,9 @@ include:
  # totem
   - board: xiao_ble
     shield: totem_dongle
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-    artifact-name: totem_dongle
+#    snippet: studio-rpc-usb-uart
+#    cmake-args: -DCONFIG_ZMK_STUDIO=y
+#    artifact-name: totem_dongle
 #  - board: xiao_ble
 #    shield: totem_left rgbled_adapter
 #    snippet: studio-rpc-usb-uart
@@ -36,11 +36,11 @@ include:
 #    artifact-name: totem_central_left
   - board: xiao_ble
     shield: totem_left rgbled_adapter
-    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-    artifact-name: totem_peripheral_left
+#    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+#    artifact-name: totem_peripheral_left
   - board: xiao_ble
     shield: totem_right rgbled_adapter
-    artifact-name: totem_peripheral_right
+#    artifact-name: totem_peripheral_right
     
   # reset
   - board: xiao_ble
