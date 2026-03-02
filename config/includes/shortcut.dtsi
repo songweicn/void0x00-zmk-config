@@ -27,8 +27,10 @@
   #define WD_DEL LA(DEL)
   #define CH_BSPC BSPC
   #define WD_BSPC LA(BSPC)
-  #define ST_LINE LG(LEFT)
-  #define EN_LINE LG(RIGHT)
+  #define WD_STR LA(LEFT)
+  #define WD_END LA(RIGHT)
+  #define LN_STR LG(LEFT)
+  #define LN_END LG(RIGHT)
   #define ST_DOC LG(UP)
   #define EN_DOC LG(DOWN)
 // System
@@ -70,8 +72,10 @@
   #define WD_DEL LC(DEL)
   #define CH_BSPC BSPC
   #define WD_BSPC LC(BSPC)
-  #define ST_LINE HOME
-  #define EN_LINE END
+  #define WD_STR LC(LEFT)
+  #define WD_END LC(RIGHT)
+  #define LN_STR HOME
+  #define LN_END END
   #define ST_DOC LC(HOME)
   #define EN_DOC LC(END)
 // System
