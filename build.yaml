@@ -3,16 +3,16 @@
 include:
 
  # sweep
-  - board: nice_nano@2
-    shield: sweep_dongle
-    artifact-name: sweep_dongle
+#  - board: nice_nano@2
+#    shield: sweep_dongle
+#    artifact-name: sweep_dongle
   - board: nice_nano@2
     shield: sweep_left
     artifact-name: sweep_central_left
-  - board: nice_nano@2
-    shield: sweep_left
-    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
-    artifact-name: sweep_peripheral_left
+#  - board: nice_nano@2
+#    shield: sweep_left
+#    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
+#    artifact-name: sweep_peripheral_left
   - board: nice_nano@2
     shield: sweep_right
     artifact-name: sweep_peripheral_right
@@ -22,9 +22,9 @@ include:
     shield: totem_dongle
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: totem_dongle
-  - board: xiao_ble
-    shield: totem_left
-    artifact-name: totem_central_left
+#  - board: xiao_ble
+#    shield: totem_left
+#    artifact-name: totem_central_left
   - board: xiao_ble
     shield: totem_left
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
