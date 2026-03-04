@@ -3,8 +3,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <behaviors/rgbled_widget.dtsi> // https://github.com/caksoylar/zmk-rgbled-widget
-// #include <behaviors/num_word.dtsi> // https://github.com/urob/zmk-auto-layer
-// #include "zmk-helpers/helper.h" //collection of helper macros. https://github.com/urob/zmk-helpers
 
 // Layer aliases
 #define DEF 0
@@ -65,7 +63,7 @@
 //           ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
               &kp LS(TAB),   &T_RHT,        &kp LS(TAB),   &W_RHT,        &ht W_CLS T_CLS,   &kp INS,  &ht WD_BSPC CH_BSPC, &ht ST_DOC UP, &ht WD_DEL CH_DEL, &kp PG_UP, \
               &kp M_PNK,     &kp M_RNG,     &kp M_MDL,     &kp M_IDX,     &kp DEL,           &kp CAPS, &ht LN_STR LEFT,    &ht EN_DOC DOWN, &ht LN_END RIGHT, &kp PG_DN, \
-&kp L_EXP,    &kp C_UND,     &kp C_CUT,     &kp C_CPY,     &kp C_PST,     &kp C_RDO,         &kp C_STOP,    &kp C_PREV,    &kp C_NEXT,    &kp C_VOL_DN,  &kp C_VOL_UP, &kp R_EXP, \
+&kp L_EXP,    &kp C_UND,     &kp C_CUT,     &kp C_CPY,     &kp C_PST,     &kp C_RDO,         &key_repeat,   &kp C_PREV,    &kp C_NEXT,    &kp C_VOL_DN,  &kp C_VOL_UP, &kp R_EXP, \
                                             &trans,        &trans,        &trans,            &kp RET,       &kp BSPC,      &kp DEL \
 //                                         ╰──────────────┴──────────────┴──────────────╯   ╰──────────────┴──────────────┴──────────────╯
             )>;
@@ -75,10 +73,10 @@
             display-name = "SYS";
             bindings = <LAYER_FROM38( \
 //           ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-              &bootloader,   &sys_reset,    &soft_off,     &kp LOCK,      &sleep,            &none,         &none,         &none,         &sys_reset,    &bootloader, \
-              &out OUT_USB,  &out OUT_BLE,  &none,         &none,         &none,             &none,         &none,         &none,         &none,         &none, \
-&kp L_EXP,    &bt BT_CLR_ALL, &bt BT_SEL 0, &bt BT_SEL 1,  &bt BT_SEL 2,  &bt BT_CLR,        &none,         &none,         &none,         &none,         &none,         &kp R_EXP, \
-                                            &trans,        &trans,        &trans,            &trans,        &trans,        &trans \
+              &none,         &none,         &soft_off,     &kp LOCK,      &rst_boot,         &rst_boot,     &kp NP_N7,     &kp NP_N8,     &kp NP_N9,         &none, \
+              &kp M_PNK,     &kp M_RNG,     &kp M_MDL,     &kp M_IDX,     &none,             &none,         &kp NP_N4,     &kp NP_N5,     &kp NP_N6,         &none, \
+&kp L_EXP,    &bt BT_CLR_ALL, &bt BT_SEL 0, &bt BT_SEL 1,  &bt BT_SEL 2,  &bt BT_CLR,        &none,         &kp NP_N1,     &kp NP_N2,     &kp NP_N3,         &none,     &kp R_EXP, \
+                                            &trans,        &trans,        &trans,            &none,         &kp NP_N0,     &trans \
 //                                         ╰──────────────┴──────────────┴──────────────╯   ╰──────────────┴──────────────┴──────────────╯
             )>;
         };
