@@ -16,8 +16,144 @@
 #include "shortcut.dtsi"
 #include "combos.dtsi"
 #include "mouse.dtsi"
-#include "behaviors.dtsi"
+// #include "behaviors.dtsi"
 #include "macros.dtsi"
+
+#define QUICK_TAP_MS 175
+#define REQUIRE_PRIOR_IDLE_MS 190
+
+&mt {
+    flavor = "hold-preferred";
+    tapping-term-ms = <150>;
+};
+
+&sk {
+  release-after-ms = <900>;
+  quick-release;
+};
+
+&sl { // Allow sticky mods to chord across sticky layers.
+  ignore-modifiers;
+};
+
+&lt {
+  flavor = "balanced";
+  tapping-term-ms = <200>;
+  quick-tap-ms = <QUICK_TAP_MS>;
+};
+
+&caps_word {
+    continue-list = <UNDERSCORE MINUS BSPC DEL N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
+};
+
+/* auto-layers+zmk helpers */
+// Tap: backspace | hold: layer | shift + hold: layer
+#define NUM_BSPC &num_layer_ht 0 BSPC
+ZMK_HOLD_TAP(num_layer_ht, bindings = <&morph_num>, <&kp>;
+             flavor = "balanced"; tapping-term-ms = <200>;
+             quick-tap-ms = <QUICK_TAP_MS>;)
+ZMK_MOD_MORPH(morph_num, bindings = <&mo NUM>, <&to NUM>;
+              mods = <(MOD_LSFT)>;)
+
+// Tap: space | hold: layer | shift + hold: layer
+#define NAV_SPC &nav_layer_ht 0 SPC
+ZMK_HOLD_TAP(nav_layer_ht, bindings = <&morph_nav>, <&kp>;
+             flavor = "balanced"; tapping-term-ms = <200>;
+             quick-tap-ms = <QUICK_TAP_MS>;)
+ZMK_MOD_MORPH(morph_nav, bindings = <&mo NAV>, <&to NAV>;
+              mods = <(MOD_LSFT)>;)
+
+/ {
+    behaviors {
+        aml: alpha_mods_l {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <165>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
+        };
+        asl: alpha_shift_l {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_R THUMBS>;
+            hold-trigger-on-release;
+        };
+        amr: alpha_mods_r {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            require-prior-idle-ms = <165>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;
+            hold-trigger-on-release;
+            require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;
+        };
+        asr: alpha_shift_r {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <KEYS_L THUMBS>;     //같은 손에서 f를 누르고 tapping-term 시간 내에 a가 눌리면 mod+a가 아니라 fa로 출력 tap으로 인식 
+            hold-trigger-on-release;                          //지정한 포지션 외에 tapping-term 시간내에 다른 키가 눌려도 먼저 눌린 키를 릴리즈로 인식 flavor문제 해결때
+        };
+        ht: hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <THUMBS>;            //지정한 포지션외에는 tapping-term 시간 내라도 tap으로 인식 
+        };
+        //test
+        morph_NM: morph_NM {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mo NUM>, <&to NUM>;
+            mods = <(MOD_LSFT)>;
+        };
+        nm_ly_ht: nm_ly_ht {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            flavor = "balanced";
+            bindings = <&morph_NM>, <&kp>;
+        };
+        // Swapper for smart alt+tab
+        sw_a: swapper_alttab {
+            compatible = "zmk,behavior-smart-toggle";
+            #binding-cells = <0>;
+            bindings = <&kp LALT>, <&kp TAB>;
+            ignored-key-positions = <THUMBS LT4 LT2 RM1 RM2 RM3 RT2>;
+        };
+        sw_c: swapper_ctrltab {
+            compatible = "zmk,behavior-smart-toggle";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&kp TAB>;
+            ignored-key-positions = <THUMBS LT4 LT2 RM1 RM2 RM3 RT2>;
+        };
+        sw_g: swapper_guitab {
+            compatible = "zmk,behavior-smart-toggle";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI>, <&kp TAB>;
+            ignored-key-positions = <THUMBS LT4 LT2 RM1 RM2 RM3 RT2>;
+        };
+    };
+};
 
 / {
     keymap {
