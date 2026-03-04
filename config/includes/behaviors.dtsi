@@ -17,33 +17,7 @@
 &caps_word {
     continue-list = <UNDERSCORE MINUS BSPC DEL N1 N2 N3 N4 N5 N6 N7 N8 N9 N0>;
 };
-/*
-&sk {
-  release-after-ms = <900>;
-  quick-release;
-};
 
-&sl { // Allow sticky mods to chord across sticky layers.
-  ignore-modifiers;
-};
-*/
-/* auto-layers+zmk helpers
-// Tap: backspace | hold: layer | shift + hold: layer
-#define NUM_BSPC &num_layer_ht 0 BSPC
-ZMK_HOLD_TAP(num_layer_ht, bindings = <&morph_num>, <&kp>;
-             flavor = "balanced"; tapping-term-ms = <200>;
-             quick-tap-ms = <QUICK_TAP_MS>;)
-ZMK_MOD_MORPH(morph_num, bindings = <&mo NUM>, <&to NUM>;
-              mods = <(MOD_LSFT)>;)
-
-// Tap: space | hold: layer | shift + hold: layer
-#define NAV_SPC &nav_layer_ht 0 SPC
-ZMK_HOLD_TAP(nav_layer_ht, bindings = <&morph_nav>, <&kp>;
-             flavor = "balanced"; tapping-term-ms = <200>;
-             quick-tap-ms = <QUICK_TAP_MS>;)
-ZMK_MOD_MORPH(morph_nav, bindings = <&mo NAV>, <&to NAV>;
-              mods = <(MOD_LSFT)>;)
-*/
 / {
     behaviors {
         // Homelow mods    
@@ -76,7 +50,7 @@ ZMK_MOD_MORPH(morph_nav, bindings = <&mo NAV>, <&to NAV>;
             require-prior-idle-ms = <REQUIRE_PRIOR_IDLE_MS>;  //시간까지는 홀드가 비활성화. 실수로 홀드가 눌리는 것을 방지 
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = <KEYS_L THUMBS>;     //지정한 포지션외에는 tapping-term 시간 내라도 tap으로 인식. 같은 손에서 fast를 빠르게 칠 때 홈로우모드 홀드 안눌
+            hold-trigger-key-positions = <KEYS_L THUMBS>;     //지정한 포지션외에는 tapping-term 시간 내라도 tap으로 인식. 같은 손에서 fast를 빠르게 칠 때 홈로우모드 홀드 안눌림
             hold-trigger-on-release;                          //지정한 포지션 외에 tapping-term 시간내에 다른 키가 눌려도 먼저 눌린 키를 릴리즈로 인식 flavor문제 해결때
         };
         asr: alpha_shift_r {
@@ -147,6 +121,14 @@ ZMK_MOD_MORPH(morph_nav, bindings = <&mo NAV>, <&to NAV>;
             #binding-cells = <0>;
             bindings = <&kp LGUI>, <&kp TAB>;
             ignored-key-positions = <THUMBS LT4 LT2 RM1 RM2 RM3 RT2>;
+        };
+        // etc
+        rst_boot: rst_boot {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <500>;
+            flavor = "tap-preferred";
+            bindings = <&bootloader>, <&sys_reset>;
         };
     };
 };
