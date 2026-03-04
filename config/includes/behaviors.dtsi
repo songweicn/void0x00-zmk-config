@@ -112,7 +112,7 @@ ZMK_MOD_MORPH(morph_nav, bindings = <&mo NAV>, <&to NAV>;
             tapping-term-ms = <200>;
             quick-tap-ms = <QUICK_TAP_MS>;
             flavor = "balanced";
-            bindings = <morph_NM>, <&kp>;
+            bindings = <&morph_NM>, <&kp>;
         };
         // Swapper for smart alt+tab
         sw_a: swapper_alttab {
