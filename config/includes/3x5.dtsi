@@ -3,8 +3,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <behaviors/rgbled_widget.dtsi> // https://github.com/caksoylar/zmk-rgbled-widget
-#include <behaviors/num_word.dtsi> // https://github.com/urob/zmk-auto-layer
-#include "zmk-helpers/helper.h" //collection of helper macros. https://github.com/urob/zmk-helpers
+// #include <behaviors/num_word.dtsi> // https://github.com/urob/zmk-auto-layer
+// #include "zmk-helpers/helper.h" //collection of helper macros. https://github.com/urob/zmk-helpers
 
 // Layer aliases
 #define DEF 0
