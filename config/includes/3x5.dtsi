@@ -73,10 +73,10 @@
             display-name = "SYS";
             bindings = <LAYER_FROM38( \
 //           ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮   ╭──────────────┬──────────────┬──────────────┬──────────────┬──────────────╮
-              &none,         &none,         &soft_off,     &kp LOCK,      &rst_boot,         &rst_boot,     &kp NP_N7,     &kp NP_N8,     &kp NP_N9,         &none, \
-              &kp M_PNK,     &kp M_RNG,     &kp M_MDL,     &kp M_IDX,     &none,             &none,         &kp NP_N4,     &kp NP_N5,     &kp NP_N6,         &none, \
-&kp L_EXP,    &bt BT_CLR_ALL, &bt BT_SEL 0, &bt BT_SEL 1,  &bt BT_SEL 2,  &bt BT_CLR,        &none,         &kp NP_N1,     &kp NP_N2,     &kp NP_N3,         &none,     &kp R_EXP, \
-                                            &trans,        &trans,        &trans,            &none,         &kp NP_N0,     &trans \
+              &none,         &none,         &soft_off,     &kp LOCK,      &rst_boot,         &rst_boot,     &kp KP_N7,     &kp KP_N8,     &kp KP_N9,         &none, \
+              &kp M_PNK,     &kp M_RNG,     &kp M_MDL,     &kp M_IDX,     &none,             &none,         &kp KP_N4,     &kp KP_N5,     &kp KP_N6,         &none, \
+&kp L_EXP,    &bt BT_CLR_ALL, &bt BT_SEL 0, &bt BT_SEL 1,  &bt BT_SEL 2,  &bt BT_CLR,        &none,         &kp KP_N1,     &kp KP_N2,     &kp KP_N3,         &none,     &kp R_EXP, \
+                                            &trans,        &trans,        &trans,            &none,         &kp KP_N0,     &trans \
 //                                         ╰──────────────┴──────────────┴──────────────╯   ╰──────────────┴──────────────┴──────────────╯
             )>;
         };
