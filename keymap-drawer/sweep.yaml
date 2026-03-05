@@ -106,11 +106,11 @@ layers:
   - {type: held}
   - {type: trans}
   NAV:
-  - Prev Win
+  - SW ←
   - '&sw_c'
-  - Prev Win
+  - SW ←
   - '&sw_g'
-  - {t: Gui+W, h: Gui+Q}
+  - {t: Tab Close, h: Win Close}
   - Ins
   - {t: Bspc, h: Alt+Bspc}
   - {t: ↑, h: Gui+↑}
@@ -126,11 +126,11 @@ layers:
   - {t: ↓, h: Gui+↓}
   - {t: →, h: Gui+→}
   - PgDn
-  - Gui+Z
-  - Gui+X
-  - Gui+C
-  - Gui+V
-  - Gui+Sft+Z
+  - Undo
+  - Cut
+  - Copy
+  - Paste
+  - Redo
   - Del
   - $$mdi:skip-backward$$
   - $$mdi:skip-forward$$
@@ -237,13 +237,9 @@ combos:
 - p: [11, 12]
   k: Enter
   l: [NUM]
-  a: bottom
-  o: -0.2
 - p: [1, 2]
   k: Tab
   l: [NUM]
-  a: bottom
-  o: 0.9
 - p: [16, 17]
   k: KP PLUS
   l: [SYS]
@@ -265,8 +261,6 @@ combos:
 - p: [17, 18]
   k: Enter
   l: [SYS]
-  a: bottom
-  o: -0.2
 - p: [7, 8]
   k: Tab
   l: [SYS]

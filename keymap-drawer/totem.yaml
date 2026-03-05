@@ -118,9 +118,9 @@ layers:
   - {type: trans}
   - {type: trans}
   NAV:
-  - Prev Win
+  - SW ←
   - '&sw_c'
-  - Prev Win
+  - SW ←
   - '&sw_a'
   - {t: Tab Close, h: Win Close}
   - Ins
@@ -257,13 +257,9 @@ combos:
 - p: [11, 12]
   k: Enter
   l: [NUM]
-  a: bottom
-  o: -0.2
 - p: [1, 2]
   k: Tab
   l: [NUM]
-  a: bottom
-  o: 0.9
 - p: [16, 17]
   k: KP PLUS
   l: [SYS]
@@ -285,8 +281,6 @@ combos:
 - p: [17, 18]
   k: Enter
   l: [SYS]
-  a: bottom
-  o: -0.2
 - p: [7, 8]
   k: Tab
   l: [SYS]
