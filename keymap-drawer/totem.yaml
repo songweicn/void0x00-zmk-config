@@ -132,7 +132,7 @@ layers:
   - Alt
   - Shift
   - Ctrl
-  - Del
+  - ''
   - CAPS
   - {t: ←, h: Home}
   - {t: ↓, h: Ctl+End}
@@ -144,7 +144,7 @@ layers:
   - Copy
   - Paste
   - Redo
-  - '&key_repeat'
+  - Del
   - $$mdi:skip-backward$$
   - $$mdi:skip-forward$$
   - $$mdi:volume-medium$$
@@ -159,10 +159,10 @@ layers:
   SYS:
   - Reset Bootloader
   - ''
-  - BAT Save
+  - ''
   - Lock
-  - ''
-  - ''
+  - BAT Save
+  - BAT Save
   - KP 7
   - KP 8
   - KP 9
@@ -217,10 +217,10 @@ combos:
 - p: [28, 29]
   k: ':'
   l: [DEF]
-- p: [30, 29]
+- p: [29, 30]
   k: $$mdi:volume-off$$
   l: [NAV]
-- p: [28, 27]
+- p: [27, 28]
   k: $$mdi:play-pause$$
   l: [NAV]
 - p: [13, 16]
@@ -256,10 +256,15 @@ combos:
   l: [NUM]
   a: bottom
   o: -0.2
-- p: [17, 16]
+- p: [1, 2]
+  k: Tab
+  l: [NUM]
+  a: bottom
+  o: 0.9
+- p: [16, 17]
   k: KP PLUS
   l: [SYS]
-- p: [7, 6]
+- p: [6, 7]
   k: KP MINUS
   l: [SYS]
 - p: [6, 17]
@@ -268,12 +273,17 @@ combos:
 - p: [16, 7]
   k: KP DIVIDE
   l: [SYS]
-- p: [28, 27]
+- p: [27, 28]
   k: ','
   l: [SYS]
-- p: [29, 28]
+- p: [28, 29]
   k: KP DOT
   l: [SYS]
-- p: [18, 17]
+- p: [17, 18]
   k: Enter
   l: [SYS]
+  a: bottom
+  o: -0.2
+- p: [7, 8]
+  k: Tab
+  l: [NUM]
