@@ -18,21 +18,33 @@ parse_config:
     "&bt BT_SEL 3": BT 4
 
     "&kp LC(INS)": Copy
-    "&kp C_CPY": Copy
-    "&kp C_CUT": Cut
     "&kp LS(INS)": Paste
-    "&kp C_PST": Paste
-    "&kp C_UND": Undo
-    "&kp C_RDO": Redo
-    "&kp C_ALL": All
+    
+    "&kp LC(C)": Copy
+    "&kp LC(X)": Cut
+    "&kp LC(V)": Paste
+    "&kp LC(Z)": Undo
+    "&kp LC(Y)": Redo
+    "&kp LC(A)": All
+
+    "&kp LG(C)": Copy
+    "&kp LG(X)": Cut
+    "&kp LG(V)": Paste
+    "&kp LG(Z)": Undo
+    "&kp LG(LS(Z))": Redo
+    "&kp LC(A)": All
 
     "&kp LG(LC(LEFT))": Prev Desk
     "&kp LG(LC(RIGHT))": Next Desk
-    '&kp T_RTH': Tab Right
-    '&kp LC(LS(TAB))': Tab Left
+    '&kp LC(TAB)': Tab Right
+    '&kp LA(TAB)': Win Right
     '&kp LS(TAB)': SW ←
-    '&kp W_CLS': Win Close
-    '&kp T_CLS': Tab Close
+    '&kp LA(F4)': Win Close
+    '&kp LC(F4)': Tab Close
+
+    '&kp LG(TAB)': Win Right
+    '&kp LA(F4)': Win Close
+    '&kp LC(F4)': Tab Close
 
     "&mmv MOVE_UP": Mouse ↑
     "&mmv MOVE_DOWN": Mouse ↓

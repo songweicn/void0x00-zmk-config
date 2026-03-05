@@ -110,7 +110,7 @@ layers:
   - '&sw_c'
   - SW ←
   - '&sw_g'
-  - {t: Tab Close, h: Win Close}
+  - {t: Gui+W, h: Gui+Q}
   - Ins
   - {t: Bspc, h: Alt+Bspc}
   - {t: ↑, h: Gui+↑}
@@ -191,7 +191,10 @@ combos:
 - p: [17, 18]
   k: ']'
   l: [DEF]
-- p: [11, 12]
+- p: [11, 10]
+  k: Gui+A
+  l: [NAV]
+- p: [12, 11]
   k: '&key_repeat'
   l: [NAV]
 - p: [26, 27]
