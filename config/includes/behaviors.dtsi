@@ -103,6 +103,21 @@
             bindings = <&morph_nav0>, <&kp>;
         };
         #define NAV_SPC &nav_ht 0 SPC
+        morph_sys0: morph_sys0 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&mo SYS>, <&to SYS>;
+            mods = <(MOD_LSFT)>;
+        };
+        sys_ht: sys_layer_hold-tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <QUICK_TAP_MS>;
+            flavor = "balanced";
+            bindings = <&morph_sys0>, <&kp>;
+        };
+        #define SYS_TAB &sys_ht 0 TAB
         // Swapper for task Switcher
         sw_a: swapper_alttab {
             compatible = "zmk,behavior-smart-toggle";
